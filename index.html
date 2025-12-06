@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hijama Harmony i Sandviken erbjuder professionell koppningsterapi (våt och torr) i en steril och avkopplande miljö. Boka din tid för smärtlindring och återhämtning." />
+    <title>Hijama Harmony - Premium Cupping Therapy</title>
+    
+    <!-- Performance: Preconnect to external assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    
+    <!-- Updated Tailwind Script to include Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+              serif: ['Cormorant Garamond', 'serif'],
+            },
+            colors: {
+              stone: {
+                50: '#fafaf9',
+                100: '#f5f5f4',
+                200: '#e7e5e4',
+                300: '#d6d3d1',
+                400: '#a8a29e',
+                500: '#78716c',
+                600: '#57534e',
+                700: '#44403c',
+                800: '#292524',
+                900: '#1c1917',
+              },
+              emerald: {
+                50: '#ecfdf5',
+                800: '#065f46',
+                900: '#064e3b',
+                950: '#022c22',
+              },
+              amber: {
+                400: '#fbbf24',
+                500: '#f59e0b',
+                600: '#d97706',
+                700: '#b45309',
+              },
+              // Extracted from Logo/Slides
+              sage: {
+                50: '#f4f7f5',
+                100: '#e3ebe6',
+                200: '#c5d9ce',
+                300: '#9dbfae',
+                400: '#74a08c',
+                500: '#558371', // Main logo leaf color approx
+                600: '#416859',
+                700: '#365349',
+                800: '#2d433c',
+                900: '#263833',
+              },
+              gold: {
+                100: '#F9F1D8',
+                200: '#F0E0AA',
+                300: '#E6CE7D',
+                400: '#D4AF37', // Classic Gold
+                500: '#C5A059', // Extracted from tray
+                600: '#997B3D',
+                700: '#7A6231',
+              }
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'shimmer': 'shimmer 2.5s infinite linear',
+              'slow-zoom': 'slowZoom 20s infinite alternate',
+              'reveal-text': 'revealText 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards',
+              'float': 'float 8s ease-in-out infinite',
+              'grain': 'grain 8s steps(10) infinite',
+              'aurora': 'aurora 20s infinite alternate',
+              'fade-in-down': 'fadeInDown 0.3s ease-out forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(60px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeInDown: {
+                '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              revealText: {
+                '0%': { transform: 'translateY(120%) skewY(10deg)', opacity: '0' },
+                '100%': { transform: 'translateY(0) skewY(0deg)', opacity: '1' },
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '-200% center' },
+                '100%': { backgroundPosition: '200% center' },
+              },
+              slowZoom: {
+                '0%': { transform: 'scale(1)' },
+                '100%': { transform: 'scale(1.15)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+                '33%': { transform: 'translateY(-15px) rotate(2deg)' },
+                '67%': { transform: 'translateY(10px) rotate(-1deg)' },
+              },
+              grain: {
+                '0%, 100%': { transform: 'translate(0, 0)' },
+                '10%': { transform: 'translate(-5%, -10%)' },
+                '20%': { transform: 'translate(-15%, 5%)' },
+                '30%': { transform: 'translate(7%, -25%)' },
+                '40%': { transform: 'translate(-5%, 25%)' },
+                '50%': { transform: 'translate(-15%, 10%)' },
+                '60%': { transform: 'translate(15%, 0%)' },
+                '70%': { transform: 'translate(0%, 15%)' },
+                '80%': { transform: 'translate(3%, 35%)' },
+                '90%': { transform: 'translate(-10%, 10%)' },
+              },
+              aurora: {
+                '0%': { transform: 'translate(0, 0) scale(1)' },
+                '50%': { transform: 'translate(-20px, -20px) scale(1.1)' },
+                '100%': { transform: 'translate(20px, 20px) scale(1)' },
+              }
+            },
+            typography: (theme) => ({
+              DEFAULT: {
+                css: {
+                  color: theme('colors.stone.600'),
+                  h1: {
+                    fontFamily: 'Cormorant Garamond, serif',
+                    color: theme('colors.emerald.950'),
+                  },
+                  h2: {
+                    fontFamily: 'Cormorant Garamond, serif',
+                    color: theme('colors.emerald.900'),
+                    marginTop: '2em',
+                  },
+                  h3: {
+                    fontFamily: 'Cormorant Garamond, serif',
+                    color: theme('colors.emerald.800'),
+                  },
+                  strong: {
+                    color: theme('colors.emerald.900'),
+                  },
+                  a: {
+                    color: theme('colors.amber.600'),
+                    '&:hover': {
+                      color: theme('colors.amber.700'),
+                    },
+                  },
+                },
+              },
+            }),
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #fafaf9; 
+        color: #1c1917; 
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        cursor: none; /* Hide default cursor */
+        overflow-x: hidden;
+      }
+      
+      /* Global Noise Texture */
+      .noise-overlay {
+        position: fixed;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        pointer-events: none;
+        z-index: 9998;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        animation: grain 8s steps(10) infinite;
+      }
+
+      /* Custom Cursor */
+      .cursor-dot {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: #C5A059; /* Gold */
+        border-radius: 50%;
+        z-index: 9999;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: difference;
+      }
+
+      .cursor-outline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(197, 160, 89, 0.5); /* Gold outline */
+        border-radius: 50%;
+        z-index: 9999;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                    height 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                    background-color 0.3s;
+        mix-blend-mode: difference;
+      }
+
+      /* Hover state for cursor */
+      body.hovering .cursor-outline {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: transparent;
+        backdrop-filter: blur(2px);
+      }
+      
+      body.hovering .cursor-dot {
+        transform: translate(-50%, -50%) scale(0);
+      }
+
+      /* Mask Text Reveal Utility */
+      .mask-text {
+        overflow: hidden;
+        display: block;
+      }
+      .mask-text span {
+        display: block;
+        transform-origin: bottom left;
+      }
+      
+      /* Liquid Hover Effect */
+      .liquid-hover {
+        filter: url('#liquid');
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f5f5f4;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #C5A059;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #997B3D;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <!-- SVG Filters for Liquid Effects -->
+    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+      <filter id="liquid">
+        <feTurbulence type="fractalNoise" baseFrequency="0.01 0.01" numOctaves="1" result="warp" />
+        <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+      </filter>
+      <filter id="chromatic">
+        <feOffset in="SourceGraphic" dx="2" dy="0" result="red" />
+        <feOffset in="SourceGraphic" dx="-2" dy="0" result="blue" />
+        <feMerge>
+            <feMergeNode in="red" />
+            <feMergeNode in="blue" />
+            <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </svg>
+    <div id="root"></div>
+  </body>
+</html>
